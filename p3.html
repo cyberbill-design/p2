@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billy Romero | Generative Artist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .image-card img { transition: transform 0.3s ease; }
+        .image-card:hover img { transform: scale(1.05); }
+        /* Added a hover effect for the featured links */
+        .featured-link:hover img { opacity: 0.9; transform: scale(.9); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="sticky top-0 bg-black/20 backdrop-blur-md z-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-bold text-xl tracking-tight text-cyan-600">BILLY ROMERO</span>
+            <div class="space-x-8 font-medium text-sm">
+                <a href="#about" class="hover:text-cyan-600 transition">About</a>
+                <a href="#featured" class="hover:text-cyan-600 transition">Featured</a>
+                <a href="#gallery" class="hover:text-cyan-600 transition">Mini Gallery</a>
+                <a href="#contact" class="hover:text-cyan-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about" class="max-w-5xl mx-auto px-6 py-24 md:py-32">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">Hi, I'm <span class="text-cyan-600">Billy Romero</span>.</h1>
+        <p class="text-xl md:text-2xl text-slate-600 max-w-3xl leading-relaxed">
+            I'm a geophysicist turned artist and designer. My passion lies in building workflows to produce thousands of art assets and expedite the creative process for eneterprise projects. I solve time dilemmas through localized AI models and high-speed Photoshop workflows.
+        </p>
+    </header>
+
+    <section id="featured" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
+        <h2 class="text-3xl font-bold mb-12">Featured Works</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <div class="group border border-slate-200 rounded-2xl p-6 bg-black hover:shadow-xl transition-all">
+                <a href="gallery.html" class="featured-link group border-slate-200 rounded-2xl p-6 bg-black hover:shadow-xl transition-all block">
+    <div class="overflow-hidden rounded-lg mb-6">
+        <img src="https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102517/l_1_w2lecr.jpg">
+<img src="https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102530/The_Movie_Posters_12_q8o9ge.jpg">
+    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-600">Work at Book/Stuff.io</h3>
+    <p class="text-slate-600 mb-4">Asset Collection.</p>
+    <div class="flex gap-2">
+        <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs font-semibold rounded-full">Explore Gallery →</span>
+    </div>
+</a>
+                <p class="text-slate-600 mb-4">Tasked with creating thousands of unique artworks for a collectible book series. Maxed workflow at 1,000 images per day using local models and batch processing. I've worked on over 500 titles.</p>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs font-semibold rounded-full">Generative AI</span>
+                    <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs font-semibold rounded-full">Batch Processing</span>
+                </div>
+            </div>
+
+            <div class="group border border-slate-200 rounded-2xl p-6 bg-black hover:shadow-xl transition-all">
+                <a href="INSERT_CLOUDINARY_COLLECTION_URL_2_HERE" target="_blank" class="featured-link block">
+                    <img src="https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102529/The_Movie_Posters_10_weiqet.jpg">
+                    <img src="https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102518/MP_15_i5npmb.jpg"> 
+<img src="https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102529/The_Movie_Posters_11_atvkuh.jpg">
+
+
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-600">Media Cover & Illustration</h3>
+                </a>
+                <p class="text-slate-600 mb-4">Fast-turnaround concept art and final illustration for high-volume publishing needs.</p>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs font-semibold rounded-full">Illustration</span>
+                    <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs font-semibold rounded-full">Concept Art</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gallery" class="bg-slate-100 py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Mini Gallery</h2>
+            <p class="text-slate-600 mb-12">Showcasing the scale of production: thousands of unique variations.</p>
+            <div id="image-grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-slate-900 text-white py-20 px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Let's solve a problem together</h2>
+        <a href="mailto:billyromerosfnm@gmail.com" class="inline-block bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-4 px-10 rounded-full transition">
+            Send me an email!
+        </a>
+    </section>
+
+    <script>
+        const myImages = [
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102517/l_4_n3euow.jpg',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102517/l_5_bwdflj.jpg',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102515/bAs_I_Lay_Dying_3_-_d4ehp2.jpg',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102519/the_4_dajoyo.jpg',             'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102518/Lol_1_uo6wj4.jpg', 'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102519/MP_3_yxo9y8.jpg',
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102518/lo_u2fwwc.jpg',
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102522/The_Clever_Emissary_1_apbgoc.jpg',
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102522/The_Clever_Emissary_10_ykexld.jpg',
+
+
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102516/bMurderer_1_-_lc0v7y.jpg'
+
+        ];
+
+        const grid = document.getElementById('image-grid');
+
+        myImages.forEach(url => {
+            const container = document.createElement('div');
+            container.className = 'image-card overflow-hidden rounded-lg bg-white shadow-sm';
+            const img = document.createElement('img');
+            img.src = url;
+            img.className = 'w-full h-40 object-cover lazy-load';
+            img.loading = 'lazy';
+            container.appendChild(img);
+            grid.appendChild(container);
+        });
+    </script>
+
+</body>
+</html>

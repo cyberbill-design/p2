@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery | Billy Romero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gallery-item img { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .gallery-item:hover img { transform: scale(1.1); filter: brightness(1.1); }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <nav class="p-6 border-b border-slate-100 sticky top-0 bg-white/90 backdrop-blur-sm z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-sm font-bold text-slate-500 hover:text-cyan-600 flex items-center gap-2">
+                ← PRESS THE BACK BUTTON TO GET BACK TO PORTFOLIO
+            </a>
+            <h1 class="font-bold text-lg">Book/Stuff.io Collection</h1>
+        </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-4xl font-bold mb-4 text-slate-900">Generative Asset Archive</h2>
+        <p class="text-slate-500 max-w-2xl">A display of localized AI model outputs and high-speed Photoshop batching. This gallery represents a fraction of the 1,000 daily assets produced for enterprise-level publishing.</p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-24">
+        <div id="main-gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            </div>
+    </main>
+
+    <script>
+        // INSERT YOUR 30 CLOUDINARY LINKS HERE
+        const galleryImages = [
+
+            'https://res.cloudinary.com/dyshppyq5/image/upload/v1775095511/Vulcania_The_Land_6_pcuftz.png',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102523/The_Cursed_Victims_5_sxmcse.jpg', 'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775106210/Erica_Carter_7_oensto.png', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775106196/The_Two_Kingdoms_8_tnxaam.png', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775106183/_0000_czdh7t.png', 'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775106107/The_Noir_Detective_2_njdfaq.png', 'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775106454/The_Butterfly_2_rpuqww.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102532/The_Romantic_Rivalry_2_rrlrwt.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102530/The_Movie_Posters_13_fklljb.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102529/The_Movie_Posters_1_mrlmdw.jpg', 
+ 
+ 
+
+            // Add 28 more links here... 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102517/l_2_idi38k.jpg', 'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102517/Final_5_gvdmwq.jpg',
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102515/bAs_I_Lay_Dying_5_-_poqyap.jpg', 'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102534/The_Surveyor_5_jcyziu.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102534/The_Suburban_Heart_7_etpyx1.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102532/The_River_Crossing_5_ndu6hb.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102528/The_Inferno_2_goe33t.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102528/The_Learned_Voice_10_m52i5a.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102527/The_Hopeful_Soldier_8_uvo81c.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102524/The_Dastardly_Duo_2_asui3y.jpg', 'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102524/The_Dastardly_Duo_6_bkafqm.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102516/bunnamed-_fau4tw.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102518/lo_u2fwwc.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102521/The_Butterfly_2_virbv0.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102520/The_Body_as_a_Garden_2_geon0t.jpg', 
+'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102522/The_Clever_Emissary_10_ykexld.jpg', 
+ 
+ 
+
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102518/lol_kavquj.jpg',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102535/The_Western_Front_10_v8gvny.jpg',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102534/The_Trad_4_nfhhvb.jpg',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102531/The_REaper_5_tuxrsc.jpg',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102528/The_Long_Journey_1_iyca96.jpg',
+            'https://res.cloudinary.com/dd0pdgppl/image/upload/v1775102520/The_Arabian_Nights_9_xlh6wi.jpg'
+        ];
+
+        const container = document.getElementById('main-gallery');
+
+        galleryImages.forEach(url => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item overflow-hidden rounded-xl bg-slate-100 aspect-[3/4]';
+            
+            const img = document.createElement('img');
+            img.src = url;
+            img.className = 'w-full h-full object-cover';
+            img.loading = 'lazy'; // Essential for 30+ images
+
+            item.appendChild(img);
+            container.appendChild(item);
+        });
+    </script>
+
+</body>
+</html>
